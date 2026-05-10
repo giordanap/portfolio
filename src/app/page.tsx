@@ -1,10 +1,8 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Section } from "@/components/layout/section";
-import { FloatingCard } from "@/components/motion/floating-card";
 import { Reveal } from "@/components/motion/reveal";
-import { Stagger, StaggerItem } from "@/components/motion/stagger";
-import { profile } from "@/data/profile";
+import { HeroSection } from "@/components/sections/hero-section";
 
 const previewSections = [
   {
@@ -57,80 +55,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section
-          id="top"
-          className="section-container flex min-h-[calc(100vh-4rem)] items-center py-20"
-        >
-          <div className="grid w-full gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <Reveal direction="up">
-              <div>
-                <div className="mb-6 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-200">
-                  Static portfolio motion foundation ready
-                </div>
-
-                <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-                  {profile.name}
-                </h1>
-
-                <p className="mt-5 max-w-3xl text-xl text-slate-300 sm:text-2xl">
-                  {profile.role} | Node.js | NestJS | AWS | Microservices
-                </p>
-
-                <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
-                  {profile.subheadline}
-                </p>
-
-                <Stagger className="mt-8 flex flex-wrap gap-3">
-                  {profile.badges.map((item) => (
-                    <StaggerItem key={item}>
-                      <span className="inline-flex rounded-full border border-slate-700/80 bg-slate-900/60 px-4 py-2 text-sm text-slate-300">
-                        {item}
-                      </span>
-                    </StaggerItem>
-                  ))}
-                </Stagger>
-              </div>
-            </Reveal>
-
-            <Reveal direction="left" delay={0.12}>
-              <FloatingCard className="glass-panel border-gradient p-6">
-                <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-5">
-                  <div className="mb-5 flex items-center gap-2">
-                    <span className="h-3 w-3 rounded-full bg-red-400" />
-                    <span className="h-3 w-3 rounded-full bg-yellow-400" />
-                    <span className="h-3 w-3 rounded-full bg-emerald-400" />
-                  </div>
-
-                  <div className="space-y-4 font-mono text-sm text-slate-300">
-                    <p>
-                      <span className="text-cyan-300">profile</span>
-                      <span className="text-slate-500">.</span>
-                      <span className="text-violet-300">focus</span>
-                      <span className="text-slate-500"> = </span>
-                      <span className="text-emerald-300">backend</span>
-                    </p>
-                    <p>
-                      <span className="text-cyan-300">cloud</span>
-                      <span className="text-slate-500">.</span>
-                      <span className="text-violet-300">provider</span>
-                      <span className="text-slate-500"> = </span>
-                      <span className="text-emerald-300">aws</span>
-                    </p>
-                    <p>
-                      <span className="text-cyan-300">systems</span>
-                      <span className="text-slate-500">.</span>
-                      <span className="text-violet-300">qualities</span>
-                      <span className="text-slate-500"> = </span>
-                      <span className="text-emerald-300">
-                        reliable, scalable, observable
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </FloatingCard>
-            </Reveal>
-          </div>
-        </section>
+        <HeroSection />
 
         {previewSections.map((section, index) => (
           <Reveal key={section.id} direction={index % 2 === 0 ? "up" : "left"}>
