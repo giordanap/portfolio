@@ -370,3 +370,34 @@ Validation:
 pnpm exec eslint .
 pnpm build
 ```
+
+---
+
+## Commit 30: Add project screenshots replacement notes
+
+Added documentation for replacing the featured project screenshot placeholders with final production screenshots.
+
+Current placeholder paths:
+
+```txt
+https://giordanap.github.io/portfolio/screenshots/projects/datatwin-gateway-placeholder.svg
+https://giordanap.github.io/portfolio/screenshots/projects/async-processing-placeholder.svg
+https://giordanap.github.io/portfolio/screenshots/projects/expiry-mate-placeholder.svg
+```
+
+Recommended final paths:
+
+```txt
+https://giordanap.github.io/portfolio/screenshots/projects/datatwin-gateway.png
+https://giordanap.github.io/portfolio/screenshots/projects/async-processing.png
+https://giordanap.github.io/portfolio/screenshots/projects/expiry-mate.png
+```
+
+Documented:
+
+- Recommended image format and dimensions.
+- Replacement steps for `src/data/featured-projects.ts`.
+- Public URL validation commands.
+- Visual validation checklist.
+- Privacy and safety checklist.
+- Placeholder lifecycle guidance.
