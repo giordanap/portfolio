@@ -6,6 +6,7 @@ import { ArchitectureSection } from "@/components/sections/architecture-section"
 import { ExpertiseSection } from "@/components/sections/expertise-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { CloudMediaSupportSection } from "@/components/sections/cloud-media-support-section";
+import { ProductionExperienceSection } from "@/components/sections/production-experience-section";
 
 const previewSections = [
   {
@@ -65,10 +66,12 @@ export default function Home() {
           </Reveal>
         ))}
             <CloudMediaSupportSection />
+      <ProductionExperienceSection />
     </main>
 
       <Footer />
     </div>
   );
 }
+
 
