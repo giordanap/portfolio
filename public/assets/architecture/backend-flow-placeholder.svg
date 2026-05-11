@@ -1,0 +1,23 @@
+<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="720" rx="64" fill="#020617"/>
+  <rect x="64" y="80" width="1472" height="560" rx="48" fill="rgba(15,23,42,0.86)" stroke="rgba(34,211,238,0.3)" stroke-width="2"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#E0F2FE">
+    <text x="190" y="370" text-anchor="middle">Client Apps</text>
+    <text x="470" y="370" text-anchor="middle">API Layer</text>
+    <text x="750" y="370" text-anchor="middle">Services</text>
+    <text x="1030" y="370" text-anchor="middle">Queues</text>
+    <text x="1310" y="370" text-anchor="middle">Cloud</text>
+  </g>
+  <g stroke="rgba(34,211,238,0.45)" stroke-width="3">
+    <rect x="90" y="275" width="200" height="150" rx="28"/>
+    <rect x="370" y="275" width="200" height="150" rx="28"/>
+    <rect x="650" y="275" width="200" height="150" rx="28"/>
+    <rect x="930" y="275" width="200" height="150" rx="28"/>
+    <rect x="1210" y="275" width="200" height="150" rx="28"/>
+    <path d="M290 350H370"/>
+    <path d="M570 350H650"/>
+    <path d="M850 350H930"/>
+    <path d="M1130 350H1210"/>
+  </g>
+  <text x="800" y="565" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600" fill="#94A3B8">Backend architecture diagram placeholder</text>
+</svg>
