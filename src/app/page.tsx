@@ -7,6 +7,7 @@ import { ExpertiseSection } from "@/components/sections/expertise-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { CloudMediaSupportSection } from "@/components/sections/cloud-media-support-section";
 import { ProductionExperienceSection } from "@/components/sections/production-experience-section";
+import { FeaturedProjectsSection } from "@/components/sections/featured-projects-section";
 
 const previewSections = [
   {
@@ -67,11 +68,13 @@ export default function Home() {
         ))}
             <CloudMediaSupportSection />
       <ProductionExperienceSection />
+      <FeaturedProjectsSection />
     </main>
 
       <Footer />
     </div>
   );
 }
+
 
 
