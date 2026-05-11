@@ -2,16 +2,11 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/motion/reveal";
+import { ArchitectureSection } from "@/components/sections/architecture-section";
 import { ExpertiseSection } from "@/components/sections/expertise-section";
 import { HeroSection } from "@/components/sections/hero-section";
 
 const previewSections = [
-  {
-    id: "architecture",
-    title: "Architecture showcase",
-    description:
-      "A visual backend architecture section will connect APIs, services, queues, cloud processing and observability.",
-  },
   {
     id: "projects",
     title: "Featured projects",
@@ -52,6 +47,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <ExpertiseSection />
+        <ArchitectureSection />
 
         {previewSections.map((section, index) => (
           <Reveal key={section.id} direction={index % 2 === 0 ? "up" : "left"}>
