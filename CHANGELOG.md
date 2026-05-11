@@ -234,3 +234,32 @@ Future replacement target:
 ```txt
 https://giordanap.github.io/portfolio/cv/giordan-arredondo-cv.pdf
 ```
+
+---
+
+## Commit 25: Add social preview image placeholder
+
+Added a social preview image placeholder for Open Graph and Twitter metadata.
+
+Public placeholder path:
+
+```txt
+https://giordanap.github.io/portfolio/og/social-preview-placeholder.svg
+```
+
+Updated behavior:
+
+- Added a 1200x630 social preview placeholder under `public/og`.
+- Connected the placeholder to Open Graph metadata.
+- Connected the placeholder to Twitter summary large image metadata.
+- Kept the image path compatible with the GitHub Pages `/portfolio/` base path.
+
+Future replacement target:
+
+```txt
+https://giordanap.github.io/portfolio/og/social-preview.png
+```
+
+Note:
+
+Some social platforms prefer PNG or JPG for final previews. This SVG is a lightweight placeholder until the final production social image is created.
