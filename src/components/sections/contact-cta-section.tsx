@@ -38,7 +38,7 @@ export function ContactCtaSection() {
                 {contactCta.description}
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href={contactCta.primaryAction.href}
                   target="_blank"
@@ -53,6 +53,15 @@ export function ContactCtaSection() {
                   className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-cyan-300/50"
                 >
                   {contactCta.secondaryAction.label}
+                </a>
+
+                <a
+                  href={contactCta.cvAction.href}
+                  download={contactCta.cvAction.download}
+                  aria-label={contactCta.cvAction.ariaLabel}
+                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/35 bg-cyan-300/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:-translate-y-0.5 hover:border-cyan-200/70 hover:bg-cyan-300/15"
+                >
+                  {contactCta.cvAction.label}
                 </a>
               </div>
 
