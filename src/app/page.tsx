@@ -2,15 +2,10 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/motion/reveal";
+import { ExpertiseSection } from "@/components/sections/expertise-section";
 import { HeroSection } from "@/components/sections/hero-section";
 
 const previewSections = [
-  {
-    id: "expertise",
-    title: "Core expertise",
-    description:
-      "Backend engineering, cloud workflows, microservices, APIs and production reliability.",
-  },
   {
     id: "architecture",
     title: "Architecture showcase",
@@ -56,6 +51,7 @@ export default function Home() {
 
       <main>
         <HeroSection />
+        <ExpertiseSection />
 
         {previewSections.map((section, index) => (
           <Reveal key={section.id} direction={index % 2 === 0 ? "up" : "left"}>

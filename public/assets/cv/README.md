@@ -6,6 +6,7 @@ Expected final file:
 
 ```txt
 Giordan_Arredondo_CV_EN.pdf
+```
 
 The portfolio data currently points to:
 
