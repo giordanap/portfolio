@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = "https://giordanap.github.io/portfolio/";
-const socialPreviewImageUrl = `${siteUrl}og/social-preview-placeholder.svg`;
+const socialPreviewImageUrl = `${siteUrl}og/social-preview.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

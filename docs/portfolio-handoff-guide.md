@@ -36,6 +36,7 @@ personal
 
 ## 1. Project purpose
 
+
 This project is a static personal portfolio built with Next.js.
 
 The portfolio presents Giordan Arredondo as a Senior Backend Engineer with strong experience in backend systems, cloud integrations, production reliability and distributed architectures.
