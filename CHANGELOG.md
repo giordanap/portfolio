@@ -263,3 +263,30 @@ https://giordanap.github.io/portfolio/og/social-preview.png
 Note:
 
 Some social platforms prefer PNG or JPG for final previews. This SVG is a lightweight placeholder until the final production social image is created.
+
+---
+
+## Commit 26: Add social preview replacement notes
+
+Added documentation for replacing the temporary social preview placeholder with a final production image.
+
+Current placeholder path:
+
+```txt
+https://giordanap.github.io/portfolio/og/social-preview-placeholder.svg
+```
+
+Recommended final path:
+
+```txt
+https://giordanap.github.io/portfolio/og/social-preview.png
+```
+
+Documented:
+
+- Recommended final image format and dimensions.
+- Metadata replacement steps.
+- Open Graph and Twitter image validation.
+- GitHub Pages base path compatibility.
+- Social preview cache notes.
+- Final post-deployment verification checklist.
