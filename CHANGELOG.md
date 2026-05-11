@@ -401,3 +401,29 @@ Documented:
 - Visual validation checklist.
 - Privacy and safety checklist.
 - Placeholder lifecycle guidance.
+
+---
+
+## Commit 31: Add final production sanity checklist
+
+Added the final production sanity checklist for closing the first production-ready portfolio phase.
+
+Documented:
+
+- Local lint and build validation.
+- GitHub Actions validation.
+- GitHub Pages deployment validation.
+- Production URL checks.
+- Static asset checks.
+- Metadata, sitemap and robots checks.
+- Navigation and section checks.
+- Responsive layout checks.
+- Accessibility smoke checks.
+- Share-readiness validation.
+- Recommended stopping point for this phase.
+
+Final expected status:
+
+```txt
+Portfolio ready to share.
+```
