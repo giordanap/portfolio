@@ -9,6 +9,7 @@ import { CloudMediaSupportSection } from "@/components/sections/cloud-media-supp
 import { ProductionExperienceSection } from "@/components/sections/production-experience-section";
 import { FeaturedProjectsSection } from "@/components/sections/featured-projects-section";
 import { TechnicalExperienceSection } from "@/components/sections/technical-experience-section";
+import { ContactCtaSection } from "@/components/sections/contact-cta-section";
 
 const previewSections = [
   {
@@ -71,12 +72,14 @@ export default function Home() {
       <ProductionExperienceSection />
       <FeaturedProjectsSection />
       <TechnicalExperienceSection />
+      <ContactCtaSection />
     </main>
 
       <Footer />
     </div>
   );
 }
+
 
 
 
