@@ -8,20 +8,20 @@ export const navigationItems = [
     href: "#architecture",
   },
   {
+    label: "Cloud",
+    href: "#cloud-media",
+  },
+  {
+    label: "Production",
+    href: "#production",
+  },
+  {
     label: "Projects",
     href: "#projects",
   },
   {
-    label: "Impact",
-    href: "#impact",
-  },
-  {
-    label: "Experience",
-    href: "#experience",
-  },
-  {
     label: "Stack",
-    href: "#stack",
+    href: "#technical-experience",
   },
   {
     label: "Contact",
