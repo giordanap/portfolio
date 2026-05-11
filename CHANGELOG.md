@@ -209,3 +209,28 @@ Possible future improvements:
 - Add bilingual support only if clearly scoped.
 
 Each improvement should be handled as a small, focused PR.
+
+---
+
+## Commit 24: Add CV download CTA link
+
+Added a CV download CTA link to the contact section.
+
+Public placeholder path:
+
+```txt
+https://giordanap.github.io/portfolio/cv/giordan-arredondo-cv-placeholder.txt
+```
+
+Updated behavior:
+
+- The contact CTA now includes a `Download CV` action.
+- The link points to the current public CV placeholder.
+- The path is relative so it remains compatible with the `/portfolio/` GitHub Pages base path.
+- The final placeholder can later be replaced with the production PDF CV.
+
+Future replacement target:
+
+```txt
+https://giordanap.github.io/portfolio/cv/giordan-arredondo-cv.pdf
+```

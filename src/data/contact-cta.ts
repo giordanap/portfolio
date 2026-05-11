@@ -11,6 +11,12 @@ export const contactCta = {
     label: "Review projects",
     href: "#projects",
   },
+  cvAction: {
+    label: "Download CV",
+    href: "cv/giordan-arredondo-cv-placeholder.txt",
+    download: "giordan-arredondo-cv-placeholder.txt",
+    ariaLabel: "Download Giordan Arredondo CV placeholder",
+  },
 };
 
 export const contactSignals = [
