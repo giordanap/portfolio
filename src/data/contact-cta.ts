@@ -1,8 +1,8 @@
 export const contactCta = {
-  eyebrow: "Let us build reliable systems",
-  title: "Need a backend engineer who can own production-critical systems?",
+  eyebrow: "Backend systems with production ownership",
+  title: "Looking for a backend engineer who thinks beyond the happy path?",
   description:
-    "I help teams build and operate APIs, microservices, cloud integrations and distributed workflows with a strong focus on reliability, observability and real production behavior.",
+    "I help teams build APIs, microservices, cloud workflows and distributed systems that are easier to operate, monitor and evolve under real production conditions.",
   primaryAction: {
     label: "View GitHub",
     href: "https://github.com/giordanap",
