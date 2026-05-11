@@ -5,6 +5,10 @@ export const featuredProjects = [
     description:
       "Migration strategy from a custom NestJS gateway to Kong OSS, keeping the existing frontend contract while improving routing, security and operational control.",
     role: "Backend and architecture contributor",
+    screenshot: {
+      src: "/screenshots/projects/datatwin-gateway-placeholder.svg",
+      alt: "DataTwin API Gateway modernization architecture screenshot placeholder",
+    },
     stack: ["Kong OSS", "NestJS", ".NET 8", "gRPC", "Docker", "JWT"],
     outcomes: [
       "Mapped existing API flows into gateway services and routes.",
@@ -18,6 +22,10 @@ export const featuredProjects = [
     description:
       "Backend patterns for production workloads using queues, retries, dead-letter queues and observability to isolate failures and protect core APIs.",
     role: "Backend engineer",
+    screenshot: {
+      src: "/screenshots/projects/async-processing-placeholder.svg",
+      alt: "Reliable async processing patterns cloud workflow screenshot placeholder",
+    },
     stack: ["Node.js", "TypeScript", "AWS SQS", "DLQ", "Lambda", "CloudWatch"],
     outcomes: [
       "Separated critical API paths from background processing.",
@@ -31,6 +39,10 @@ export const featuredProjects = [
     description:
       "Personal product concept for household expiry tracking, designed with a contract-first approach, clear entities and backend-ready product boundaries.",
     role: "Full-stack product builder",
+    screenshot: {
+      src: "/screenshots/projects/expiry-mate-placeholder.svg",
+      alt: "ExpiryMate contract-first MVP product screenshot placeholder",
+    },
     stack: ["Next.js", "NestJS", "TypeScript", "API contracts", "Product modeling"],
     outcomes: [
       "Defined Product, ItemLot, Category, Location and NotificationRule entities.",

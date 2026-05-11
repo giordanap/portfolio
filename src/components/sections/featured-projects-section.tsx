@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 
 import {
@@ -48,55 +50,67 @@ export function FeaturedProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-120px" }}
               transition={{ duration: 0.55, delay: index * 0.08 }}
-              className="group flex min-h-full flex-col rounded-[2rem] border border-white/10 bg-slate-900/75 p-7 shadow-2xl shadow-slate-950/40 transition hover:-translate-y-1 hover:border-sky-300/40"
+              className="group flex min-h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/75 shadow-2xl shadow-slate-950/40 transition hover:-translate-y-1 hover:border-sky-300/40"
             >
-              <div className="flex items-center justify-between gap-4">
-                <span className="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-sky-200">
-                  {project.label}
-                </span>
-
-                <span className="text-sm text-slate-500">0{index + 1}</span>
+              <div className="relative aspect-video overflow-hidden border-b border-white/10 bg-slate-950">
+                <Image
+                  src={project.screenshot.src}
+                  alt={project.screenshot.alt}
+                  width={960}
+                  height={540}
+                  className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                />
               </div>
 
-              <h3 className="mt-6 text-2xl font-semibold text-white">
-                {project.title}
-              </h3>
-
-              <p className="mt-4 text-sm font-medium text-sky-200">
-                {project.role}
-              </p>
-
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                {project.description}
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.stack.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-slate-300"
-                  >
-                    {item}
+              <div className="flex flex-1 flex-col p-7">
+                <div className="flex items-center justify-between gap-4">
+                  <span className="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-sky-200">
+                    {project.label}
                   </span>
-                ))}
-              </div>
 
-              <div className="mt-7 border-t border-white/10 pt-6">
-                <p className="text-sm font-semibold text-white">
-                  What this shows
+                  <span className="text-sm text-slate-500">0{index + 1}</span>
+                </div>
+
+                <h3 className="mt-6 text-2xl font-semibold text-white">
+                  {project.title}
+                </h3>
+
+                <p className="mt-4 text-sm font-medium text-sky-200">
+                  {project.role}
                 </p>
 
-                <ul className="mt-4 space-y-3">
-                  {project.outcomes.map((outcome) => (
-                    <li
-                      key={outcome}
-                      className="flex gap-3 text-sm leading-6 text-slate-300"
+                <p className="mt-4 text-sm leading-7 text-slate-300">
+                  {project.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-slate-300"
                     >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-300" />
-                      {outcome}
-                    </li>
+                      {item}
+                    </span>
                   ))}
-                </ul>
+                </div>
+
+                <div className="mt-7 border-t border-white/10 pt-6">
+                  <p className="text-sm font-semibold text-white">
+                    What this shows
+                  </p>
+
+                  <ul className="mt-4 space-y-3">
+                    {project.outcomes.map((outcome) => (
+                      <li
+                        key={outcome}
+                        className="flex gap-3 text-sm leading-6 text-slate-300"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-300" />
+                        {outcome}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </motion.article>
           ))}
