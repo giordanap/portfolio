@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = "https://giordanap.github.io/portfolio/";
+const socialPreviewImageUrl = `${siteUrl}og/social-preview-placeholder.svg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -54,12 +55,26 @@ export const metadata: Metadata = {
       "Backend-focused portfolio highlighting Node.js, NestJS, TypeScript, AWS, microservices, distributed systems and production reliability.",
     siteName: "Giordan Arredondo Portfolio",
     locale: "en_US",
+    images: [
+      {
+        url: socialPreviewImageUrl,
+        width: 1200,
+        height: 630,
+        alt: "Giordan Arredondo Senior Backend Engineer portfolio preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Giordan Arredondo | Senior Backend Engineer",
     description:
       "Senior Backend Engineer focused on resilient APIs, cloud workflows and production-grade distributed systems.",
+    images: [
+      {
+        url: socialPreviewImageUrl,
+        alt: "Giordan Arredondo Senior Backend Engineer portfolio preview",
+      },
+    ],
   },
   robots: {
     index: true,
