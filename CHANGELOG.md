@@ -341,3 +341,32 @@ Documented:
 - Visual preview checks.
 - Social platform cache notes.
 - Final completion checklist.
+
+---
+
+## Commit 29: Add project screenshots placeholder
+
+Added visual screenshot placeholders for the featured projects section.
+
+Created placeholder assets:
+
+```txt
+https://giordanap.github.io/portfolio/screenshots/projects/datatwin-gateway-placeholder.svg
+https://giordanap.github.io/portfolio/screenshots/projects/async-processing-placeholder.svg
+https://giordanap.github.io/portfolio/screenshots/projects/expiry-mate-placeholder.svg
+```
+
+Updated behavior:
+
+- Added screenshot metadata to featured projects.
+- Rendered project visuals inside each project card.
+- Kept placeholders backend-focused and aligned with each project.
+- Preserved GitHub Pages compatibility through public assets.
+- Prepared the project section for future real screenshots.
+
+Validation:
+
+```powershell
+pnpm exec eslint .
+pnpm build
+```

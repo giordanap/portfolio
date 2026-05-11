@@ -1,0 +1,24 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">DataTwin API Gateway modernization screenshot placeholder</title>
+  <desc id="description">Placeholder screenshot for the DataTwin API Gateway modernization project.</desc>
+  <rect width="960" height="540" rx="32" fill="#020617"/>
+  <circle cx="120" cy="80" r="190" fill="#0EA5E9" opacity="0.2"/>
+  <circle cx="820" cy="80" r="220" fill="#10B981" opacity="0.16"/>
+  <circle cx="540" cy="560" r="280" fill="#6366F1" opacity="0.18"/>
+  <rect x="56" y="56" width="848" height="428" rx="28" fill="white" fill-opacity="0.055" stroke="white" stroke-opacity="0.13"/>
+  <text x="88" y="112" fill="#A5F3FC" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="3">PLATFORM MODERNIZATION</text>
+  <text x="88" y="174" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800">DataTwin API Gateway</text>
+  <text x="88" y="224" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600">Kong OSS · NestJS · .NET 8 · gRPC · JWT</text>
+  <rect x="88" y="282" width="184" height="92" rx="22" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.4"/>
+  <rect x="388" y="282" width="184" height="92" rx="22" fill="#0F172A" stroke="#34D399" stroke-opacity="0.4"/>
+  <rect x="688" y="282" width="184" height="92" rx="22" fill="#0F172A" stroke="#818CF8" stroke-opacity="0.4"/>
+  <path d="M272 328H388" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 10"/>
+  <path d="M572 328H688" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 10"/>
+  <text x="126" y="320" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Frontend</text>
+  <text x="120" y="350" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="15">HTTP contract</text>
+  <text x="426" y="320" fill="#DCFCE7" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Gateway</text>
+  <text x="421" y="350" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="15">Routes · JWT</text>
+  <text x="729" y="320" fill="#E0E7FF" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Services</text>
+  <text x="722" y="350" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="15">gRPC · APIs</text>
+  <text x="88" y="430" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="20">Placeholder until a real architecture screenshot is added.</text>
+</svg>
