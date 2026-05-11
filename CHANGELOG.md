@@ -317,3 +317,27 @@ Validation:
 pnpm exec eslint .
 pnpm build
 ```
+
+---
+
+## Commit 28: Add social preview validation checklist
+
+Added an operational checklist for validating the final social preview image.
+
+Final social preview image:
+
+```txt
+https://giordanap.github.io/portfolio/og/social-preview.png
+```
+
+Documented:
+
+- Local file validation.
+- Metadata validation.
+- Open Graph checks.
+- Twitter card checks.
+- Production image URL checks.
+- GitHub Pages deployment validation.
+- Visual preview checks.
+- Social platform cache notes.
+- Final completion checklist.
