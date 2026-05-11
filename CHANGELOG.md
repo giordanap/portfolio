@@ -290,3 +290,30 @@ Documented:
 - GitHub Pages base path compatibility.
 - Social preview cache notes.
 - Final post-deployment verification checklist.
+
+---
+
+## Commit 27: Add final social preview image
+
+Added the final production social preview image.
+
+Final public image path:
+
+```txt
+https://giordanap.github.io/portfolio/og/social-preview.png
+```
+
+Updated behavior:
+
+- Generated a 1200x630 PNG social preview image.
+- Updated Open Graph metadata to use the final PNG.
+- Updated Twitter summary large image metadata to use the final PNG.
+- Kept metadata compatible with the GitHub Pages `/portfolio/` base path.
+- Preserved the previous SVG placeholder as a reference asset.
+
+Validation:
+
+```powershell
+pnpm exec eslint .
+pnpm build
+```
