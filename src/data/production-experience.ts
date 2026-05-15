@@ -1,48 +1,60 @@
 export const productionHighlights = [
   {
-    metric: "10+",
-    label: "Years building software",
+    metric: "Timeouts",
+    label: "Blocking flow reduction",
     description:
-      "Backend-focused full-stack experience across APIs, integrations, cloud services and production systems.",
+      "Split heavy operations, reduce synchronous work and move fragile tasks into background processing.",
   },
   {
-    metric: "5+",
-    label: "Years in distributed systems",
+    metric: "DLQ",
+    label: "Failure isolation",
     description:
-      "Working with services, queues, retries, failure isolation, cloud integrations and production operations.",
+      "Design queues, retries and dead-letter paths so failed workloads are traceable and recoverable.",
   },
   {
-    metric: "24/7",
-    label: "Production mindset",
+    metric: "Logs",
+    label: "Operational visibility",
     description:
-      "Focused on reliability, observability, incident response, performance and maintainable delivery.",
+      "Add logs, audits and lifecycle tracking so teams can understand what happened in production.",
   },
 ];
 
 export const productionAreas = [
   {
-    title: "Production reliability",
+    title: "Timeouts",
     description:
-      "I build backend flows with clear failure paths, retries, dead-letter queues and operational visibility.",
-    items: ["SQS retries", "DLQ patterns", "CloudWatch logs", "Error isolation"],
+      "I reduce blocking operations, split workloads and move heavy tasks to background processing when critical APIs should stay responsive.",
+    items: ["Background jobs", "Queue isolation", "Batch splitting", "API protection"],
   },
   {
-    title: "Incident response",
+    title: "Memory leaks",
     description:
-      "I approach incidents by reading signals, identifying impact, stabilizing the system and documenting the root cause.",
-    items: ["Log analysis", "Impact assessment", "Hotfixes", "Post-incident learning"],
+      "I analyze memory growth, isolate expensive flows and stabilize services that degrade under sustained production usage.",
+    items: ["Memory growth", "Flow isolation", "Runtime stability", "Production analysis"],
   },
   {
-    title: "Performance and scalability",
+    title: "Concurrency issues",
     description:
-      "I optimize APIs and backend processes by reducing bottlenecks, improving query behavior and separating workloads.",
-    items: ["API latency", "Async processing", "Queue-based load control", "Service boundaries"],
+      "I design safer flows using queues, idempotency, controlled retries and isolation to reduce duplicated or conflicting work.",
+    items: ["Idempotency", "Controlled retries", "SQS", "Race condition reduction"],
   },
   {
-    title: "Cloud operations",
+    title: "High-volume batches",
     description:
-      "I work with cloud-native components to support integrations, background jobs, storage and monitoring.",
-    items: ["AWS Lambda", "S3", "SQS", "CloudWatch"],
+      "I optimize execution by chunking workloads, parallelizing safe operations and moving long-running processing outside the request path.",
+    items: ["Chunking", "Parallelization", "Async processing", "Batch optimization"],
+  },
+  {
+    title: "Traceability gaps",
+    description:
+      "I add audit trails, structured logs and lifecycle tracking for critical operations such as messaging, file processing and retries.",
+    items: ["Audit trails", "Structured logs", "Lifecycle tracking", "CloudWatch"],
+  },
+  {
+    title: "Fragile integrations",
+    description:
+      "I protect integrations with clearer boundaries, retries, error handling and observable failure paths across external providers.",
+    items: ["Provider boundaries", "Retry strategy", "Error handling", "Operational signals"],
   },
 ];
 
@@ -51,24 +63,24 @@ export const productionTimeline = [
     step: "01",
     title: "Detect",
     description:
-      "Use logs, alerts, metrics and user impact signals to understand what is happening in production.",
+      "Read logs, metrics, user impact and operational signals to understand the real production behavior.",
   },
   {
     step: "02",
-    title: "Stabilize",
+    title: "Isolate",
     description:
-      "Reduce impact first through safe fixes, rollbacks, feature isolation or queue-based containment.",
+      "Separate the risky workload, reduce blast radius and protect the critical API path first.",
   },
   {
     step: "03",
-    title: "Resolve",
+    title: "Recover",
     description:
-      "Apply the technical fix with clear validation, traceability and confidence in the affected flow.",
+      "Apply a safe fix, retry or replay failed work and validate the affected flow with traceability.",
   },
   {
     step: "04",
     title: "Improve",
     description:
-      "Turn the incident into stronger monitoring, better boundaries, safer retries and clearer documentation.",
+      "Convert the incident into stronger architecture, better observability and safer failure handling.",
   },
 ];
