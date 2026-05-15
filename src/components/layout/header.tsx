@@ -33,7 +33,7 @@ export function Header() {
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-1 xl:flex"
         >
           {navigationItems.map((item) => (
             <a
@@ -46,7 +46,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a
             href={profile.links.github}
             target="_blank"
@@ -66,7 +66,7 @@ export function Header() {
           </a>
         </div>
 
-        <details className="group relative lg:hidden">
+        <details className="group relative xl:hidden">
           <summary
             aria-label="Open portfolio navigation menu"
             className="list-none rounded-full border border-slate-700/80 px-4 py-2 text-sm text-slate-200 marker:hidden"
@@ -74,7 +74,7 @@ export function Header() {
             Menu
           </summary>
 
-          <div className="absolute right-0 mt-3 w-72 overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 p-2 shadow-2xl backdrop-blur-xl">
+          <div className="absolute right-0 mt-3 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 p-2 shadow-2xl backdrop-blur-xl">
             <nav aria-label="Mobile navigation">
               {navigationItems.map((item) => (
                 <a

@@ -47,10 +47,10 @@ export default function Home() {
         <ExpertiseSection />
         <ArchitectureSection />
         <CloudMediaSupportSection />
+        <TechnicalExperienceSection />
         <ProductionExperienceSection />
         <ArchitecturePatternsSection />
         <FeaturedProjectsSection />
-        <TechnicalExperienceSection />
         <ContactCtaSection />
       </main>
 
