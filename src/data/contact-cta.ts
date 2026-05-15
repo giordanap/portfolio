@@ -1,15 +1,13 @@
 export const contactCta = {
-  eyebrow: "Backend systems with production ownership",
-  title: "Looking for backend systems that are easier to operate?",
+  eyebrow: "Contact me",
+  title: "Let’s talk about backend systems.",
   description:
-    "I help teams build APIs, microservices, cloud workflows and distributed systems that are easier to monitor, evolve and stabilize under real production conditions.",
-  primaryAction: {
-    label: "View GitHub",
-    href: "https://github.com/giordanap",
-  },
-  secondaryAction: {
-    label: "View architectures",
-    href: "#architecture",
+    "If you are building APIs, cloud workflows, microservices or production-critical systems, send me a quick message through WhatsApp.",
+  whatsapp: {
+    phone: "51931017921",
+    buttonLabel: "Send WhatsApp message",
+    defaultMessage:
+      "Hola Giordan, soy [Nombre] [Apellido]. Te contacto desde tu portfolio.",
   },
 };
 
@@ -25,15 +23,16 @@ export const contactSignals = [
       "AWS, SQS, DLQ, Lambda, S3, CloudWatch, retries and operational visibility.",
   },
   {
-    title: "Full-stack support",
+    title: "Production systems",
     description:
-      "React, Next.js and Angular experience when frontend delivery needs backend alignment.",
+      "Timeouts, memory leaks, concurrency, traceability and safer failure paths.",
   },
 ];
 
 export const contactAvailability = [
-  "Backend engineering roles",
-  "Full-stack roles with backend leadership",
-  "Cloud and API modernization projects",
-  "Distributed systems and reliability-focused teams",
+  "Backend roles",
+  "Cloud workflows",
+  "API modernization",
+  "Microservices",
+  "Production reliability",
 ];
