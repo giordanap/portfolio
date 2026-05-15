@@ -25,17 +25,17 @@ export function ProductionExperienceSection() {
           className="lg:sticky lg:top-28"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.32em] text-emerald-300">
-            Production experience
+            Problems I solve
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Backend engineering with production ownership.
+            Production problems need architecture, not only patches.
           </h2>
 
           <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">
-            I care about systems after they are deployed: how they fail, how
-            they recover, how they are monitored and how quickly a team can
-            understand what is happening under real traffic.
+            I work on backend systems where failure behavior matters: timeouts,
+            memory leaks, concurrency issues, high-volume batches, fragile
+            integrations and missing traceability.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -106,11 +106,11 @@ export function ProductionExperienceSection() {
           >
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-400">
-                Incident workflow
+                Reliability workflow
               </p>
 
               <h3 className="text-2xl font-semibold text-white">
-                From detection to stronger systems.
+                From production signal to stronger system design.
               </h3>
             </div>
 
