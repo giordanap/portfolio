@@ -27,18 +27,19 @@ export function FeaturedProjectsSection() {
         >
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.32em] text-sky-300">
-              Featured projects
+              Selected systems
             </p>
 
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Projects that show backend judgment, not only UI.
+              Systems that show backend judgment, not a resume timeline.
             </h2>
           </div>
 
           <p className="text-base leading-8 text-slate-300 sm:text-lg">
-            These projects represent how I think about software: API contracts,
-            distributed systems, cloud components, reliability, observability and
-            product delivery with clear technical boundaries.
+            This section highlights representative systems and architecture
+            patterns: gateway platforms, cloud async processing and
+            contract-first product backends. The goal is to show how I think
+            about technical boundaries, reliability and delivery.
           </p>
         </motion.div>
 
@@ -96,7 +97,7 @@ export function FeaturedProjectsSection() {
 
                 <div className="mt-7 border-t border-white/10 pt-6">
                   <p className="text-sm font-semibold text-white">
-                    What this shows
+                    What this system shows
                   </p>
 
                   <ul className="mt-4 space-y-3">
@@ -130,7 +131,7 @@ export function FeaturedProjectsSection() {
               </p>
 
               <h3 className="mt-3 text-2xl font-semibold text-white">
-                I highlight projects where the engineering decisions matter.
+                I highlight systems where engineering decisions matter.
               </h3>
             </div>
 
