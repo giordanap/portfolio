@@ -12,6 +12,10 @@ export const navigationItems = [
     href: "#cloud-media",
   },
   {
+    label: "Stack",
+    href: "#technical-experience",
+  },
+  {
     label: "Problems",
     href: "#production",
   },
@@ -22,10 +26,6 @@ export const navigationItems = [
   {
     label: "Systems Work",
     href: "#projects",
-  },
-  {
-    label: "Stack",
-    href: "#technical-experience",
   },
   {
     label: "Contact",

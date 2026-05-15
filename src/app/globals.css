@@ -29,6 +29,7 @@
 html {
   min-width: 320px;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
   background: var(--portfolio-bg);
 }
 
@@ -55,6 +56,19 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
 }
 
 ::selection {
@@ -182,25 +196,6 @@ a {
     0 0 48px rgba(34, 211, 238, 0.12);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
-  }
-}
-
-html {
-  scroll-padding-top: 5rem;
-}
-
 .skip-link {
   position: fixed;
   top: 0.75rem;
@@ -224,4 +219,51 @@ html {
 
 [id] {
   scroll-margin-top: 5rem;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --portfolio-section-padding: 4rem;
+  }
+
+  html {
+    scroll-padding-top: 4.5rem;
+  }
+
+  [id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  .section-container {
+    width: min(100% - 1.25rem, var(--portfolio-max-width));
+  }
+
+  .portfolio-shell {
+    background-size: 36px 36px;
+  }
+
+  .portfolio-shell::after {
+    opacity: 0.22;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --portfolio-max-width: 1280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }
