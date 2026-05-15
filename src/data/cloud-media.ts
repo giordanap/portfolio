@@ -1,50 +1,50 @@
 export const cloudMediaPillars = [
   {
-    label: "Storage",
-    title: "Cloud media origin",
+    label: "Queue-based",
+    title: "Async workload isolation",
     description:
-      "I design media flows where files are stored safely, versioned clearly and prepared to be served through cloud infrastructure.",
-    points: ["S3 buckets", "Object metadata", "Private assets", "Lifecycle rules"],
+      "I separate heavy or fragile operations from critical API paths using queues, workers, retries and failure isolation.",
+    points: ["SQS queues", "Background jobs", "Retry strategy", "Failure isolation"],
   },
   {
-    label: "Delivery",
-    title: "Fast global distribution",
+    label: "Processing",
+    title: "Cloud processing flows",
     description:
-      "I separate API workload from media delivery by using CDN based patterns that reduce latency and protect backend services.",
-    points: ["CloudFront", "Cache headers", "Static export", "Public assets"],
+      "I design cloud workflows where files, events and business tasks move through controlled processing steps.",
+    points: ["Lambda workers", "S3 storage", "Event triggers", "Batch execution"],
   },
   {
     label: "Reliability",
-    title: "Controlled media operations",
+    title: "Observable failure handling",
     description:
-      "I treat uploads, processing and delivery as production flows with retries, traceability and clear failure paths.",
-    points: ["Retries", "DLQ patterns", "CloudWatch logs", "Operational visibility"],
+      "I treat failures as part of the architecture by adding DLQs, logs, audits and operational visibility.",
+    points: ["DLQ patterns", "CloudWatch logs", "Audit trails", "Operational visibility"],
   },
 ];
 
 export const cloudMediaPipeline = [
-  "Upload or static asset registration",
-  "Object storage with clear ownership",
-  "Optional background processing",
-  "CDN optimized delivery",
-  "Monitoring and incident visibility",
+  "API receives request",
+  "Queue isolates workload",
+  "Worker processes task",
+  "Result is stored",
+  "Failures are observed",
 ];
 
 export const cloudMediaSignals = [
   {
-    value: "S3",
-    label: "Object storage",
+    value: "SQS",
+    label: "Queue isolation",
   },
   {
-    value: "CDN",
-    label: "Edge delivery",
+    value: "Lambda",
+    label: "Background processing",
   },
   {
     value: "DLQ",
-    label: "Failure isolation",
+    label: "Failure recovery",
   },
   {
     value: "Logs",
-    label: "Traceability",
+    label: "Production traceability",
   },
 ];

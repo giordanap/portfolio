@@ -25,22 +25,21 @@ export function CloudMediaSupportSection() {
           className="max-w-3xl"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.32em] text-cyan-300">
-            Cloud media support
+            Cloud & async architecture
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Media delivery designed like backend infrastructure.
+            Heavy workloads should not block critical APIs.
           </h2>
 
           <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">
-            I approach cloud media as a production concern: storage, delivery,
-            processing, retries and observability should be separated from the
-            main API so the platform remains fast, resilient and easier to
-            operate.
+            I design backend flows where queues, workers, storage, retries and
+            observability protect the main API while background operations keep
+            moving safely under real production conditions.
           </p>
         </motion.div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-4">
           {cloudMediaSignals.map((signal, index) => (
             <motion.div
               key={signal.label}
@@ -105,10 +104,10 @@ export function CloudMediaSupportSection() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-400">
-                Production path
+                Async production path
               </p>
               <h3 className="mt-3 text-2xl font-semibold text-white">
-                From asset to observable delivery.
+                From API request to observable background processing.
               </h3>
             </div>
 
