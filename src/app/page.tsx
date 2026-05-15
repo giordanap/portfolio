@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { ArchitecturePatternsSection } from "@/components/sections/architecture-patterns-section";
 import { ArchitectureSection } from "@/components/sections/architecture-section";
 import { CloudMediaSupportSection } from "@/components/sections/cloud-media-support-section";
 import { ContactCtaSection } from "@/components/sections/contact-cta-section";
@@ -47,6 +48,7 @@ export default function Home() {
         <ArchitectureSection />
         <CloudMediaSupportSection />
         <ProductionExperienceSection />
+        <ArchitecturePatternsSection />
         <FeaturedProjectsSection />
         <TechnicalExperienceSection />
         <ContactCtaSection />

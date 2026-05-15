@@ -16,6 +16,10 @@ export const navigationItems = [
     href: "#production",
   },
   {
+    label: "Patterns",
+    href: "#patterns",
+  },
+  {
     label: "Systems Work",
     href: "#projects",
   },
