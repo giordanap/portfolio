@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { TechPill } from "@/components/ui/tech-pill";
 import { profile } from "@/data/profile";
-import { withBasePath } from "@/lib/site-paths";
 
 const heroTechCards = [
   {
@@ -32,7 +31,7 @@ const codeLines = [
     key: "profile",
     object: "profile",
     property: "focus",
-    value: "backend",
+    value: "backend systems",
   },
   {
     key: "cloud",
@@ -58,13 +57,13 @@ export function HeroSection() {
         <Reveal direction="up">
           <div>
             <Badge variant="cyan" className="mb-6">
-              Backend-focused full-stack engineer
+              Backend systems | APIs | Cloud workflows
             </Badge>
 
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
               <span className="block">{profile.name}</span>
               <span className="text-gradient mt-2 block">
-                Senior Backend Engineer
+                Backend Systems Engineer
               </span>
             </h1>
 
@@ -85,20 +84,15 @@ export function HeroSection() {
             </Stagger>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button href="#projects" size="lg">
-                View Projects
+              <Button href="#expertise" size="lg">
+                Explore Systems
               </Button>
 
-              <Button
-                href={withBasePath(profile.links.cv)}
-                variant="secondary"
-                size="lg"
-                download
-              >
-                Download CV
+              <Button href="#architecture" variant="secondary" size="lg">
+                View Architectures
               </Button>
 
-              <Button href={`mailto:${profile.email}`} variant="ghost" size="lg">
+              <Button href="#contact" variant="ghost" size="lg">
                 Contact Me
               </Button>
             </div>

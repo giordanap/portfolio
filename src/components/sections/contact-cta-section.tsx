@@ -54,15 +54,6 @@ export function ContactCtaSection() {
                 >
                   {contactCta.secondaryAction.label}
                 </a>
-
-                <a
-                  href={contactCta.cvAction.href}
-                  download={contactCta.cvAction.download}
-                  aria-label={contactCta.cvAction.ariaLabel}
-                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/35 bg-cyan-300/10 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:-translate-y-0.5 hover:border-cyan-200/70 hover:bg-cyan-300/15"
-                >
-                  {contactCta.cvAction.label}
-                </a>
               </div>
 
               <div className="mt-10 grid gap-3 sm:grid-cols-2">
@@ -117,7 +108,7 @@ export function ContactCtaSection() {
                 </p>
 
                 <p className="mt-2 text-sm leading-6 text-slate-300">
-                  Senior backend profile with full-stack range, cloud delivery
+                  Backend systems with full-stack range, cloud delivery
                   experience and a practical mindset for systems that must work
                   reliably in production.
                 </p>

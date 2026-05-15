@@ -1,10 +1,10 @@
 export const profile = {
   name: "Giordan Arredondo",
-  role: "Senior Backend Engineer",
-  headline: "I build resilient APIs, cloud workflows and scalable backend systems.",
+  role: "Backend Engineer",
+  headline: "Backend systems for APIs, cloud workflows and production reliability.",
   subheadline:
-    "Senior Backend Engineer specialized in Node.js, NestJS, AWS, microservices and production-grade distributed systems.",
-  location: "Lima, Peru",
+    "I design resilient backend architectures with Node.js, NestJS, TypeScript, AWS, microservices, queues, retries and observability.",
+  location: "Remote",
   email: "garredondop@uni.pe",
   phone: "+51 931 017 921",
   links: {
@@ -13,11 +13,13 @@ export const profile = {
     cv: "/assets/cv/Giordan_Arredondo_CV_EN.pdf",
   },
   badges: [
-    "Senior Backend Engineer",
     "Node.js / NestJS",
+    "TypeScript",
     "AWS",
     "Microservices",
-    "Production Reliability",
+    "SQS / DLQ",
+    "gRPC",
+    "Observability",
   ],
   focusAreas: [
     "Backend Engineering",

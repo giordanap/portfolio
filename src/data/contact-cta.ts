@@ -1,21 +1,15 @@
 export const contactCta = {
   eyebrow: "Backend systems with production ownership",
-  title: "Looking for a backend engineer who thinks beyond the happy path?",
+  title: "Looking for backend systems that are easier to operate?",
   description:
-    "I help teams build APIs, microservices, cloud workflows and distributed systems that are easier to operate, monitor and evolve under real production conditions.",
+    "I help teams build APIs, microservices, cloud workflows and distributed systems that are easier to monitor, evolve and stabilize under real production conditions.",
   primaryAction: {
     label: "View GitHub",
     href: "https://github.com/giordanap",
   },
   secondaryAction: {
-    label: "Review projects",
-    href: "#projects",
-  },
-  cvAction: {
-    label: "Download CV",
-    href: "cv/giordan-arredondo-cv-placeholder.txt",
-    download: "giordan-arredondo-cv-placeholder.txt",
-    ariaLabel: "Download Giordan Arredondo CV placeholder",
+    label: "View architectures",
+    href: "#architecture",
   },
 };
 
@@ -38,7 +32,7 @@ export const contactSignals = [
 ];
 
 export const contactAvailability = [
-  "Senior Backend Engineer roles",
+  "Backend engineering roles",
   "Full-stack roles with backend leadership",
   "Cloud and API modernization projects",
   "Distributed systems and reliability-focused teams",

@@ -1,6 +1,5 @@
 import { navigationItems } from "@/data/navigation";
 import { profile } from "@/data/profile";
-import { withBasePath } from "@/lib/site-paths";
 
 export function Footer() {
   return (
@@ -46,11 +45,10 @@ export function Footer() {
             </a>
 
             <a
-              href={withBasePath(profile.links.cv)}
-              download
+              href="#contact"
               className="text-sm text-slate-400 transition hover:text-cyan-200"
             >
-              CV
+              Contact
             </a>
           </div>
         </div>
