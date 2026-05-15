@@ -1,22 +1,22 @@
 export const navigationItems = [
   {
-    label: "Expertise",
+    label: "Systems",
     href: "#expertise",
   },
   {
-    label: "Architecture",
+    label: "Architectures",
     href: "#architecture",
   },
   {
-    label: "Cloud",
+    label: "Cloud & Async",
     href: "#cloud-media",
   },
   {
-    label: "Production",
+    label: "Problems",
     href: "#production",
   },
   {
-    label: "Projects",
+    label: "Systems Work",
     href: "#projects",
   },
   {
