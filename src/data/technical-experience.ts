@@ -1,57 +1,118 @@
 export const technicalExperience = [
   {
-    period: "Backend focus",
-    title: "API and service engineering",
+    period: "Core",
+    title: "Backend core",
     description:
-      "Designing and building backend services with Node.js, NestJS, TypeScript, REST APIs, integrations and clear service boundaries.",
-    tags: ["Node.js", "NestJS", "TypeScript", "REST APIs", "Microservices"],
+      "The strongest part of my profile: APIs, services, contracts and backend logic with Node.js, NestJS and TypeScript.",
+    tags: ["Node.js", "NestJS", "TypeScript", "REST", "GraphQL", "gRPC"],
   },
   {
-    period: "Cloud systems",
-    title: "AWS-based production workloads",
+    period: "Cloud",
+    title: "Cloud and async workflows",
     description:
-      "Supporting cloud flows with queues, serverless jobs, storage, monitoring and operational visibility for production environments.",
-    tags: ["AWS", "SQS", "Lambda", "S3", "CloudWatch"],
+      "AWS-based flows for queues, background jobs, file processing, retries, DLQs and production visibility.",
+    tags: ["AWS", "Lambda", "S3", "SQS", "SNS", "CloudWatch"],
   },
   {
-    period: "Reliability",
-    title: "Distributed systems behavior",
+    period: "Architecture",
+    title: "Distributed systems patterns",
     description:
-      "Working with retries, dead-letter queues, failure isolation, async processing and traceability to keep systems easier to operate.",
-    tags: ["Retries", "DLQ", "Async processing", "Observability", "Incidents"],
+      "Microservices, API Gateway, event-driven architecture, service boundaries and observable production behavior.",
+    tags: ["Microservices", "Kong", "API Gateway", "Events", "DLQ"],
   },
   {
-    period: "Full-stack support",
-    title: "Frontend delivery when needed",
+    period: "Complement",
+    title: "Frontend and platform support",
     description:
-      "Building and supporting user-facing features with React, Next.js and Angular while keeping backend architecture as the main strength.",
-    tags: ["React", "Next.js", "Angular", "Frontend integration", "UX support"],
+      "Frontend and complementary platform experience used to connect product workflows with backend capabilities.",
+    tags: ["React", "Next.js", "Angular", ".NET", "Azure"],
   },
 ];
 
 export const technicalStackGroups = [
   {
-    title: "Backend",
-    items: ["Node.js", "NestJS", "TypeScript", "REST", "APIs", "Microservices"],
+    title: "Backend Core",
+    description: "Main area of specialization.",
+    items: [
+      "Node.js",
+      "NestJS",
+      "TypeScript",
+      "REST",
+      "GraphQL",
+      "gRPC",
+      "CQRS",
+      "Clean Architecture",
+    ],
   },
   {
-    title: "Cloud and operations",
-    items: ["AWS", "SQS", "Lambda", "S3", "CloudWatch", "Docker"],
+    title: "Cloud & Async",
+    description: "Cloud workflows and background processing.",
+    items: [
+      "AWS Lambda",
+      "S3",
+      "SNS",
+      "SQS",
+      "SES",
+      "IAM",
+      "ECS",
+      "CloudWatch",
+      "KMS",
+    ],
   },
   {
-    title: "Reliability",
-    items: ["Retries", "DLQ", "Logs", "Monitoring", "Performance", "Incidents"],
+    title: "Architecture",
+    description: "How systems are organized and connected.",
+    items: [
+      "Microservices",
+      "API Gateway",
+      "Kong",
+      "Event-driven Architecture",
+      "Distributed Systems",
+      "Service Boundaries",
+    ],
   },
   {
-    title: "Frontend support",
-    items: ["React", "Next.js", "Angular", "Tailwind CSS", "API integration"],
+    title: "Data & Cache",
+    description: "Storage and data access technologies.",
+    items: [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "SQL Server",
+      "DynamoDB",
+    ],
+  },
+  {
+    title: "Frontend Support",
+    description: "Frontend delivery as a complement to backend work.",
+    items: [
+      "React",
+      "Next.js",
+      "Angular",
+      "TypeScript",
+      "API Integration",
+    ],
+  },
+  {
+    title: "Complementary Platforms",
+    description: "Additional backend and cloud platform experience.",
+    items: [
+      ".NET Core",
+      "Azure App Services",
+      "Azure Functions",
+      "Blob Storage",
+      "Key Vault",
+      "Docker",
+      "GitHub Actions",
+      "GitLab CI/CD",
+    ],
   },
 ];
 
 export const technicalOperatingStyle = [
-  "Understand the production flow before changing it.",
-  "Keep API contracts clear and predictable.",
+  "Start from the production flow, not only from the framework.",
+  "Keep API contracts clear, predictable and easy to consume.",
   "Separate synchronous requests from background workloads.",
-  "Make failures visible through logs and monitoring.",
-  "Prefer simple architecture that teams can operate.",
+  "Design failure paths with retries, DLQs, logs and audits.",
+  "Use complementary tools only when they support the main backend architecture.",
 ];

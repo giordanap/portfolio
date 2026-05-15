@@ -26,19 +26,19 @@ export function TechnicalExperienceSection() {
         >
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.32em] text-indigo-300">
-              Technical experience
+              Technology map
             </p>
 
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-              A backend profile with cloud, reliability and full-stack range.
+              Technologies grouped by how they support backend systems.
             </h2>
           </div>
 
           <p className="text-base leading-8 text-slate-300 sm:text-lg">
-            My strongest value is in backend engineering, especially when APIs,
-            distributed systems, cloud services and production behavior need to
-            work together. I can also support the frontend side when product
-            delivery needs it.
+            The goal is not to show every tool as equally important. My core is
+            backend engineering with Node.js, NestJS, TypeScript, AWS,
+            microservices and production reliability. Frontend, .NET and Azure
+            appear as complementary experience.
           </p>
         </motion.div>
 
@@ -91,7 +91,7 @@ export function TechnicalExperienceSection() {
             </p>
 
             <h3 className="mt-3 text-2xl font-semibold text-white">
-              Technologies grouped by how I use them.
+              Main stack first, complementary tools clearly separated.
             </h3>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -101,6 +101,10 @@ export function TechnicalExperienceSection() {
                   className="rounded-2xl border border-white/10 bg-slate-950/70 p-5"
                 >
                   <h4 className="font-semibold text-white">{group.title}</h4>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    {group.description}
+                  </p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
                     {group.items.map((item) => (
@@ -129,7 +133,7 @@ export function TechnicalExperienceSection() {
             </p>
 
             <h3 className="mt-3 text-2xl font-semibold text-white">
-              How I make technical decisions.
+              How I choose and apply technologies.
             </h3>
 
             <ul className="mt-8 space-y-4">
@@ -145,6 +149,18 @@ export function TechnicalExperienceSection() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8 rounded-3xl border border-indigo-300/20 bg-indigo-300/10 p-5">
+              <p className="text-sm font-semibold text-indigo-100">
+                Portfolio positioning
+              </p>
+
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                Backend, cloud and architecture remain the main signal. Other
+                technologies are shown as support for product delivery and
+                platform integration.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
