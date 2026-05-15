@@ -1,116 +1,204 @@
+"use client";
+
+import { useState } from "react";
+
 import { Section } from "@/components/layout/section";
 import { Reveal } from "@/components/motion/reveal";
-import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { Badge } from "@/components/ui/badge";
 import { BrowserFrame } from "@/components/ui/browser-frame";
 import { GlassCard } from "@/components/ui/glass-card";
 import { TechPill } from "@/components/ui/tech-pill";
+import {
+  architectureCarouselSlides,
+  type ArchitectureCarouselSlide,
+} from "@/data/architecture-carousel";
 
-const architectureLayers = [
+const toneClasses: Record<
+  ArchitectureCarouselSlide["visualTone"],
   {
-    title: "Client Apps",
-    subtitle: "Web / Mobile / Admin",
-    description: "Frontend applications consuming stable backend contracts.",
-    tags: ["React", "Next.js", "Angular"],
+    badge: "cyan" | "emerald" | "violet";
+    accent: string;
+    border: string;
+    node: string;
+    glow: string;
+    text: string;
+  }
+> = {
+  cyan: {
+    badge: "cyan",
+    accent: "text-cyan-300",
+    border: "border-cyan-400/30",
+    node: "border-cyan-400/25 bg-cyan-400/10 text-cyan-100",
+    glow: "shadow-[0_0_70px_rgba(34,211,238,0.16)]",
+    text: "text-cyan-200",
   },
-  {
-    title: "API Layer",
-    subtitle: "REST / GraphQL / gRPC",
-    description: "Typed contracts, predictable integrations and API Gateway patterns.",
-    tags: ["REST", "GraphQL", "gRPC"],
+  emerald: {
+    badge: "emerald",
+    accent: "text-emerald-300",
+    border: "border-emerald-400/30",
+    node: "border-emerald-400/25 bg-emerald-400/10 text-emerald-100",
+    glow: "shadow-[0_0_70px_rgba(52,211,153,0.14)]",
+    text: "text-emerald-200",
   },
-  {
-    title: "Services",
-    subtitle: "Business capabilities",
-    description: "Microservices, domain modules and maintainable service boundaries.",
-    tags: ["NestJS", "Node.js", ".NET"],
+  violet: {
+    badge: "violet",
+    accent: "text-violet-300",
+    border: "border-violet-400/30",
+    node: "border-violet-400/25 bg-violet-400/10 text-violet-100",
+    glow: "shadow-[0_0_70px_rgba(167,139,250,0.14)]",
+    text: "text-violet-200",
   },
-  {
-    title: "Queue / Events",
-    subtitle: "Async processing",
-    description: "Decoupled workflows using queues, retries, DLQs and background jobs.",
-    tags: ["SQS", "SNS", "DLQ"],
-  },
-  {
-    title: "Cloud Processing",
-    subtitle: "AWS workflows",
-    description: "Serverless and cloud modules for scalable processing and storage.",
-    tags: ["Lambda", "S3", "ECS"],
-  },
-  {
-    title: "Observability",
-    subtitle: "Reliability loop",
-    description: "Logs, audits, metrics and incident visibility for production systems.",
-    tags: ["CloudWatch", "Audits", "Alerts"],
-  },
-] as const;
-
-const backendFlowLines = [
-  "Client request enters through a stable API contract.",
-  "The API layer routes work to focused backend services.",
-  "Heavy work is decoupled through queues and retry strategies.",
-  "Cloud services process, store and observe the workflow.",
-  "Failures are traced through logs, audits and operational signals.",
-] as const;
+};
 
 export function ArchitectureSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const activeSlide = architectureCarouselSlides[activeIndex];
+  const activeTone = toneClasses[activeSlide.visualTone];
+
+  const goToPreviousSlide = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === 0
+        ? architectureCarouselSlides.length - 1
+        : currentIndex - 1,
+    );
+  };
+
+  const goToNextSlide = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === architectureCarouselSlides.length - 1
+        ? 0
+        : currentIndex + 1,
+    );
+  };
+
   return (
     <Section
       id="architecture"
-      eyebrow="Architecture showcase"
-      title="Backend systems designed around APIs, async workflows and reliability."
-      description="A visual representation of the kind of systems emphasized in the CV: API-first services, cloud workflows, queues, retries, storage and observability."
+      eyebrow="Architecture carousel"
+      title="Backend architecture patterns shown as controlled system flows."
+      description="Explore the backend systems I work with: API gateways, async processing, gRPC microservices, file pipelines and production reliability loops."
     >
-      <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-start">
+      <div className="grid gap-8 xl:grid-cols-[1.08fr_0.92fr] xl:items-start">
         <Reveal direction="up">
           <div className="glass-panel border-gradient overflow-hidden p-5 sm:p-6">
-            <div className="relative rounded-3xl border border-slate-800 bg-slate-950/70 p-5 sm:p-6">
-              <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_28%),radial-gradient(circle_at_80%_15%,rgba(167,139,250,0.1),transparent_26%)]" />
+            <div
+              className={`relative overflow-hidden rounded-3xl border ${activeTone.border} bg-slate-950/70 p-5 sm:p-6 ${activeTone.glow}`}
+            >
+              <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.13),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(167,139,250,0.12),transparent_28%),radial-gradient(circle_at_50%_92%,rgba(52,211,153,0.08),transparent_34%)]" />
 
               <div className="relative">
                 <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-                  <Badge variant="cyan">System flow</Badge>
+                  <Badge variant={activeTone.badge}>{activeSlide.eyebrow}</Badge>
+
                   <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
-                    frontend → backend → cloud
+                    {activeSlide.flowLabel}
                   </p>
                 </div>
 
-                <Stagger className="grid gap-4 md:grid-cols-2">
-                  {architectureLayers.map((layer, index) => (
-                    <StaggerItem key={layer.title}>
-                      <GlassCard className="relative h-full p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/35">
-                        <div className="mb-5 flex items-start justify-between gap-4">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-400/25 bg-cyan-400/10 text-sm font-bold text-cyan-200">
-                            {index + 1}
+                <div aria-live="polite">
+                  <p
+                    className={`mb-3 text-sm font-semibold uppercase tracking-[0.28em] ${activeTone.accent}`}
+                  >
+                    0{activeIndex + 1} / 0{architectureCarouselSlides.length}
+                  </p>
+
+                  <h3 className="max-w-3xl text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">
+                    {activeSlide.title}
+                  </h3>
+
+                  <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-400 sm:text-base">
+                    {activeSlide.description}
+                  </p>
+                </div>
+
+                <div className="mt-8 rounded-[2rem] border border-slate-800 bg-slate-950/70 p-5">
+                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {activeSlide.flow.map((step, index) => (
+                      <div
+                        key={step}
+                        className={`relative min-h-28 rounded-2xl border p-4 ${activeTone.node}`}
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <span className="text-xs font-bold opacity-70">
+                            0{index + 1}
                           </span>
 
-                          <span className="rounded-full border border-slate-800 bg-slate-950/60 px-3 py-1 text-xs text-slate-500">
-                            {layer.subtitle}
-                          </span>
-                        </div>
-
-                        <h3 className="text-lg font-semibold text-slate-100">
-                          {layer.title}
-                        </h3>
-
-                        <p className="mt-3 text-sm leading-6 text-slate-400">
-                          {layer.description}
-                        </p>
-
-                        <div className="mt-5 flex flex-wrap gap-2">
-                          {layer.tags.map((tag, tagIndex) => (
-                            <TechPill
-                              key={tag}
-                              tone={tagIndex === 0 ? "primary" : "secondary"}
+                          {index < activeSlide.flow.length - 1 ? (
+                            <span
+                              aria-hidden="true"
+                              className="text-sm opacity-60"
                             >
-                              {tag}
-                            </TechPill>
-                          ))}
+                              →
+                            </span>
+                          ) : (
+                            <span
+                              aria-hidden="true"
+                              className="text-sm opacity-60"
+                            >
+                              ✓
+                            </span>
+                          )}
                         </div>
-                      </GlassCard>
-                    </StaggerItem>
+
+                        <p className="mt-5 text-base font-semibold leading-6">
+                          {step}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {activeSlide.tags.map((tag, index) => (
+                    <TechPill
+                      key={tag}
+                      tone={index < 2 ? "primary" : "secondary"}
+                    >
+                      {tag}
+                    </TechPill>
                   ))}
-                </Stagger>
+                </div>
+
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex gap-3">
+                    <button
+                      type="button"
+                      onClick={goToPreviousSlide}
+                      className="rounded-full border border-white/15 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:border-cyan-300/50 hover:text-cyan-100"
+                    >
+                      Previous
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={goToNextSlide}
+                      className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-100 transition hover:-translate-y-0.5 hover:border-cyan-200/70 hover:bg-cyan-300/15"
+                    >
+                      Next
+                    </button>
+                  </div>
+
+                  <div
+                    aria-label="Architecture carousel slide selector"
+                    className="flex flex-wrap gap-2"
+                  >
+                    {architectureCarouselSlides.map((slide, index) => (
+                      <button
+                        key={slide.id}
+                        type="button"
+                        onClick={() => setActiveIndex(index)}
+                        aria-label={`Show ${slide.title}`}
+                        aria-current={activeIndex === index ? "true" : undefined}
+                        className={`h-2.5 rounded-full transition ${
+                          activeIndex === index
+                            ? "w-8 bg-cyan-300"
+                            : "w-2.5 bg-slate-700 hover:bg-slate-500"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -121,32 +209,34 @@ export function ArchitectureSection() {
             <BrowserFrame title="architecture.flow.ts">
               <div className="space-y-4 p-5 font-mono text-sm leading-6 text-slate-300">
                 <p>
-                  <span className="text-cyan-300">system</span>
+                  <span className="text-cyan-300">architecture</span>
                   <span className="text-slate-500">.</span>
-                  <span className="text-violet-300">entrypoint</span>
+                  <span className="text-violet-300">pattern</span>
                   <span className="text-slate-500"> = </span>
-                  <span className="text-emerald-300">api-layer</span>
+                  <span className="text-emerald-300">{activeSlide.id}</span>
                 </p>
                 <p>
-                  <span className="text-cyan-300">workflow</span>
+                  <span className="text-cyan-300">entrypoint</span>
                   <span className="text-slate-500">.</span>
-                  <span className="text-violet-300">mode</span>
+                  <span className="text-violet-300">flow</span>
                   <span className="text-slate-500"> = </span>
-                  <span className="text-emerald-300">sync + async</span>
+                  <span className="text-emerald-300">
+                    {activeSlide.flowLabel}
+                  </span>
                 </p>
                 <p>
                   <span className="text-cyan-300">failure</span>
                   <span className="text-slate-500">.</span>
                   <span className="text-violet-300">strategy</span>
                   <span className="text-slate-500"> = </span>
-                  <span className="text-emerald-300">retry + dlq + audit</span>
+                  <span className="text-emerald-300">retry + isolate + observe</span>
                 </p>
                 <p>
                   <span className="text-cyan-300">ops</span>
                   <span className="text-slate-500">.</span>
                   <span className="text-violet-300">visibility</span>
                   <span className="text-slate-500"> = </span>
-                  <span className="text-emerald-300">logs + metrics</span>
+                  <span className="text-emerald-300">logs + audits + metrics</span>
                 </p>
               </div>
             </BrowserFrame>
@@ -154,37 +244,44 @@ export function ArchitectureSection() {
 
           <Reveal direction="left" delay={0.16}>
             <GlassCard className="p-6">
-              <div className="mb-5 flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">
-                    Reliability path
-                  </p>
-                  <h3 className="mt-2 text-xl font-semibold text-slate-100">
-                    From request to observable workflow
-                  </h3>
-                </div>
+              <div className="mb-5">
+                <p
+                  className={`text-sm font-semibold uppercase tracking-[0.24em] ${activeTone.accent}`}
+                >
+                  Why this matters
+                </p>
+                <h3 className="mt-2 text-xl font-semibold text-slate-100">
+                  {activeSlide.title}
+                </h3>
               </div>
 
-              <ol className="space-y-4">
-                {backendFlowLines.map((line, index) => (
-                  <li key={line} className="flex gap-3 text-sm leading-6 text-slate-400">
-                    <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-cyan-400/25 bg-cyan-400/10 text-xs font-bold text-cyan-200">
+              <ul className="space-y-4">
+                {activeSlide.highlights.map((highlight, index) => (
+                  <li
+                    key={highlight}
+                    className="flex gap-3 text-sm leading-6 text-slate-400"
+                  >
+                    <span
+                      className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-bold ${activeTone.node}`}
+                    >
                       {index + 1}
                     </span>
-                    <span>{line}</span>
+                    <span>{highlight}</span>
                   </li>
                 ))}
-              </ol>
+              </ul>
             </GlassCard>
           </Reveal>
 
           <Reveal direction="left" delay={0.24}>
             <GlassCard className="p-6">
               <p className="text-sm leading-7 text-slate-400">
-                <span className="font-semibold text-cyan-200">CV alignment:</span>{" "}
-                this section supports the strongest profile signals: Node.js,
-                NestJS, AWS, microservices, SQS, DLQs, retries, high-volume
-                processing, incident resolution and production reliability.
+                <span className={`font-semibold ${activeTone.text}`}>
+                  Portfolio focus:
+                </span>{" "}
+                this carousel shows systems and architecture decisions instead
+                of a resume-style technology list. Each slide connects tools to
+                a concrete backend flow.
               </p>
             </GlassCard>
           </Reveal>
